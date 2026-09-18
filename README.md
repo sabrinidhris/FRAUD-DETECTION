@@ -31,9 +31,6 @@ This project trains and compares three classifiers (Logistic Regression, Random 
 **Features used:** `step`, `type`, `amount`, `oldbalanceOrg`, `oldbalanceDest`
 *(Only pre-transaction data is used — no information that wouldn't be available in real time.)*
 
-## 🚀 Live App
-
-👉 [Add your Streamlit Cloud link here once deployed]
 
 ## 🛠️ Tech Stack
 
