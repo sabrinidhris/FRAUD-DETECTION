@@ -23,12 +23,12 @@ This project trains and compares three classifiers (Logistic Regression, Random 
 
 | Metric | Score (Fraud class) |
 |---|---|
-| Precision | 1.00 |
-| Recall | 0.97 |
-| F1-score | 0.98 |
-| Overall Accuracy | 1.00 |
+| Precision |0.90 |
+| Recall | 0.98 |
+| F1-score | 0.94 |
+| Overall Accuracy | 0.99|
 
-**Features used:** `step`, `type`, `amount`, `oldbalanceOrg`, `oldbalanceDest`
+**Features used:**  `type`, `amount`, `oldbalanceOrg`, `oldbalanceDest`
 *(Only pre-transaction data is used — no information that wouldn't be available in real time.)*
 
 
@@ -38,8 +38,6 @@ This project trains and compares three classifiers (Logistic Regression, Random 
 - **MySQL** + SQLAlchemy (data source, training only)
 - **Streamlit** (web app / deployment)
 
--
-  <img width="958" height="760" alt="image" src="https://github.com/user-attachments/assets/de4eb960-ecc6-47fe-989e-f77004cb9944" />
 
-  <img width="1063" height="606" alt="image" src="https://github.com/user-attachments/assets/68ed7d2f-abf1-49d1-af33-3375f6cb17ec" />
 
+<img width="1041" height="765" alt="image" src="https://github.com/user-attachments/assets/5e505a78-d86b-41f9-b21b-f0b620fb6dec" />
