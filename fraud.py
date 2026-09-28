@@ -15,7 +15,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 
 
 ### Connect to SQL and Load Data
-engine = create_engine('mysql+pymysql://root:132831@localhost/fraud_analysis')
+engine = create_engine('mysql+pymysql://root:(password)@localhost/fraud_analysis')
 
 query = "SELECT * FROM transactions"
 df = pd.read_sql(query, engine)
@@ -27,7 +27,7 @@ df.head()
 df.columns = df.columns.str.strip().str.lower()
 print(df.columns.tolist())
 
-X = df.drop(['isfraude','nameorig','namedest'], axis=1, errors='ignore')
+X = df.drop(['isfraude','nameorig','namedest','step','newbalanceorg','newbalancedest'], axis=1, errors='ignore')
 y = df['isfraude']
 
 print(X.columns.tolist())
@@ -39,7 +39,7 @@ X.head()
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
 print(X_train.shape, X_test.shape)
 
-numerical_cols = ['step', 'amount', 'oldbalanceorg', 'oldbalancedest','newbalanceorg','newbalancedest']
+numerical_cols = ['amount', 'oldbalanceorg', 'oldbalancedest']
 
 scaler = StandardScaler()
 X_train[numerical_cols] = scaler.fit_transform(X_train[numerical_cols])
